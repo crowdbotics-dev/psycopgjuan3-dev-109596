@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Juan,Juan,Juan
-from .serializers import JuanSerializer,JuanSerializer,JuanSerializer
+from home.models import Juan,Azuil,Azuil,Juan,Azuil,Juan
+from .serializers import JuanSerializer,AzuilSerializer,AzuilSerializer,JuanSerializer,AzuilSerializer,JuanSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -37,3 +37,8 @@ class JuanViewSet(viewsets.ModelViewSet):
     serializer_class = JuanSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Juan.objects.all()
+
+class AzuilViewSet(viewsets.ModelViewSet):
+    serializer_class = AzuilSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Azuil.objects.all()
